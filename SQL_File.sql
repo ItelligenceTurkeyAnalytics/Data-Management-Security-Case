@@ -30,6 +30,18 @@ WITH (
 )
 TABLESPACE pg_default;
 
+CREATE ROLE uganda
+LOGIN
+PASSWORD '*****';
+
+CREATE ROLE kuba
+LOGIN
+PASSWORD '*****';
+
+CREATE ROLE tayland
+LOGIN
+PASSWORD '*****';
+
 ALTER TABLE IF EXISTS public.salesdataattempt
     OWNER to digitalent;
 
