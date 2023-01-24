@@ -110,6 +110,8 @@ Steps are:
 5.	Click OK. If your data source is password-protected, Power BI will prompt you for user credentials. Type your Username and Password in the respective fields and click.
 6.	Now you should see the data structures in your data source. You can preview the contents of the database objects by clicking on them.
 7.	To load the PostgreSQL data into Power BI for analysis, select the needed table and click Load.
+
+
 In the third step you are selecting a data source that you configured it in the ODBC as in the Figure 2. While configuring it, you must make a log-in for user. This user can be the admin user which provide you to see all records in the data source. But, also, this user can be a previously created role in database which provide you to see the records as much as you're authorized. This called Row Level Security (RLS). Row-Level Security (RLS) simplifies the design and coding of security in your application. RLS helps you implement restrictions on data row access. For example, you can ensure that workers access only those data rows that are pertinent to their country.
 
 
