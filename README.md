@@ -83,7 +83,35 @@ GRANT ALL ON TABLE public.salesdataattempt TO uganda;
 -- POLICY: worker
 ```    
 
-Then We used ODBC to add these roles to PowerBI. EMİR CAN U TAKE FROM HERE.
+Then, we used ODBC to connect PostgreSQL to PowerBI. With this, our dataset and created roles are all came to the PowerBI. Below, this will be explained.
+
+PostgreSQL
+
+PostgreSQL is an open-source relational database management system. Also, it has an API which provide you to load your data into the database and writing queries using Python.
+
+PowerBI
+
+Microsoft Power BI is a business intelligence (BI) platform that provides nontechnical business users with tools for aggregating, analysing, visualizing and sharing data. It provides the visualization of the data which is pulled from database, or any excel file.
+
+ODBC
+
+Open Database Connectivity (ODBC) is an open standard Application Programming Interface (API) for accessing a database. Using ODBC, you can create database applications with access to any database for which your end user has an ODBC driver. 
+ODBC is designed to expose database capabilities, not supplement them. According to this, we can say that ODBC will not suddenly transform a simple database into a fully featured relational database engine; but applications that use ODBC are responsible for any cross-database functionality.
+
+Connection of PostgreSQL with PowerBI using ODBC
+
+Most BI tools allow connections to several databases and APIs. Microsoft Power BI is a very extensively used BI tool and PostgreSQL is a very popular database. So, of course, there is a method used to connect PostgreSQL to Power BI. You can provide the connection between PostgreSQL and PowerBI using ODBC.
+Steps are:
+1.	Run Power BI Desktop and click Get Data.
+2.	Select the Other category in the Get Data dialog box, then select ODBC. Click Connect to confirm the choice.
+3.	In the From ODBC dialog box, expand the Data Source Name drop-down list and select the previously configured data source for PostgreSQL.
+4.	If you would like to enter a SQL statement to narrow down the returned results, click the Advanced options arrow, which expands the dialog box, and type or paste your SQL statement.
+5.	Click OK. If your data source is password-protected, Power BI will prompt you for user credentials. Type your Username and Password in the respective fields and click.
+6.	Now you should see the data structures in your data source. You can preview the contents of the database objects by clicking on them.
+7.	To load the PostgreSQL data into Power BI for analysis, select the needed table and click Load.
+In the third step you are selecting a data source that you configured it in the ODBC as in the Figure 2. While configuring it, you must make a log-in for user. This user can be the admin user which provide you to see all records in the data source. But, also, this user can be a previously created role in database which provide you to see the records as much as you're authorized. This called Row Level Security (RLS). Row-Level Security (RLS) simplifies the design and coding of security in your application. RLS helps you implement restrictions on data row access. For example, you can ensure that workers access only those data rows that are pertinent to their country.
+
+
 ## Usage
 
 ![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
