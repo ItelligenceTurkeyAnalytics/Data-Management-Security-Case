@@ -7,16 +7,35 @@ This case contains applying RLS to tables on the SQL side, creating policies and
 
 ## Step By Step
 
-###### Creating VPC (Virtual Private Cloud) through AWS
+## Creating VPC (Virtual Private Cloud) through AWS
 
-What is AWS VPC?
+###What is AWS VPC?
 
 Amazon Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources into a virtual network that you've defined. This virtual network closely resembles a traditional network that you'd operate in your own data center, with the benefits of using the scalable infrastructure of AWS.
 
-Setting up a VPC step by step:
+Setting up a VPC step by step (explained visually in documents) :
 
--
+-Logging into our AWS account.
+-Opening VPC's main page > Create VPC > VPC and more > Adjusting settings as we would like > View VPC > VPC has been created.
+ 
+ ## EC2 (Elastic Compute Cloud) Setup through AWS
+ 
+ ###What is AWS EC2?
+ 
+Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.
+ 
+Setting up an EC2 step by step (explained visually in documents) : 
 
+-Logging into our AWS account.
+-Opening EC2's main page.
+-Launch Instance > Setting the configuration settings such as choosing a name, the amount of machines and the kind of the operating system.
+-Adjusting settings.
+-A SSH Key needs to be created in order to connect to the machine.
+-Network settings
+-Configuring storage
+-Connecting to the machine with SSH Key
+
+Note: Please go thorough documents in order to understand better.
 
 ###### Creating "salesdataattempt" table
 
