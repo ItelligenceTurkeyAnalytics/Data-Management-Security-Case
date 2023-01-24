@@ -35,7 +35,11 @@ Setting up an EC2 step by step (explained visually in documents) :
 -Configuring storage
 -Connecting to the machine with SSH Key
 
-Note: Please go thorough documents in order to understand better.
+Note: Please go through documents in order to understand better.
+
+## Installation of PostgreSQL
+
+Explained in documents.
 
 ###### Creating "salesdataattempt" table
 
