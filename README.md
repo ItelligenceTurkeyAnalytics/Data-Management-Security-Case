@@ -115,11 +115,6 @@ Steps are:
 In the third step you are selecting a data source that you configured it in the ODBC as in the Figure 2. While configuring it, you must make a log-in for user. This user can be the admin user which provide you to see all records in the data source. But, also, this user can be a previously created role in database which provide you to see the records as much as you're authorized. This called Row Level Security (RLS). Row-Level Security (RLS) simplifies the design and coding of security in your application. RLS helps you implement restrictions on data row access. For example, you can ensure that workers access only those data rows that are pertinent to their country.
 
 
-## Usage
-
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-You can upload photos to Documents folder and use it's url here. Also You can sample from top of this file, where I added Our logo.
-
 ## Achievements
 
 - SQL RLS
@@ -140,7 +135,7 @@ While We creating SQL table from Excel table, We have converted Text variables i
 ## Documentation
 
 [Documentation](https://linktodocumentation)
-I'm adding this as a template too incase we create a pdf folder as a Documentation.
+I'm adding this as a template to let you see the documentation in the pdf format.
 
 ## Authors
 
