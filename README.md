@@ -97,6 +97,9 @@ You can upload photos to Documents folder and use it's url here. Also You can sa
 - PowerBI 
 - EC2
 - SHH Connection
+- Postgre SQL
+- ODBC
+- Connection of PostgreSQL and PowerBI
 
 ## Optimizations
 
