@@ -92,7 +92,7 @@ PostgreSQL is an open-source relational database management system. Also, it has
 
 Microsoft Power BI is a business intelligence (BI) platform that provides nontechnical business users with tools for aggregating, analysing, visualizing and sharing data. It provides the visualization of the data which is pulled from database, or any excel file.
 
-###### ODBC
+##### ODBC
 
 Open Database Connectivity (ODBC) is an open standard Application Programming Interface (API) for accessing a database. Using ODBC, you can create database applications with access to any database for which your end user has an ODBC driver. 
 ODBC is designed to expose database capabilities, not supplement them. According to this, we can say that ODBC will not suddenly transform a simple database into a fully featured relational database engine; but applications that use ODBC are responsible for any cross-database functionality.
