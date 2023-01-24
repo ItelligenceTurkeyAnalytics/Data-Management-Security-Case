@@ -9,7 +9,7 @@ This case contains applying RLS to tables on the SQL side, creating policies and
 
 ## Creating VPC (Virtual Private Cloud) through AWS
 
-###What is AWS VPC?
+####What is AWS VPC?
 
 Amazon Virtual Private Cloud (Amazon VPC) enables you to launch AWS resources into a virtual network that you've defined. This virtual network closely resembles a traditional network that you'd operate in your own data center, with the benefits of using the scalable infrastructure of AWS.
 
@@ -20,7 +20,7 @@ Setting up a VPC step by step (explained visually in documents) :
  
  ## EC2 (Elastic Compute Cloud) Setup through AWS
  
- ###What is AWS EC2?
+ ####What is AWS EC2?
  
 Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) Cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic.
  
