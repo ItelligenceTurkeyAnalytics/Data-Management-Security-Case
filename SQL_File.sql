@@ -40,8 +40,6 @@ GRANT ALL ON TABLE public.salesdataattempt TO digitalent;
 
 GRANT ALL ON TABLE public.salesdataattempt TO kuba;
 
-GRANT ALL ON TABLE public.salesdataattempt TO manager;
-
 GRANT ALL ON TABLE public.salesdataattempt TO tayland;
 
 GRANT ALL ON TABLE public.salesdataattempt TO uganda;
@@ -66,8 +64,8 @@ CREATE TABLE IF NOT EXISTS public."EmployeeData"
     "EMPLOYEE_ID" bigint,
     "EMPLOYEE_NAME" text COLLATE pg_catalog."default",
     "SEX" text COLLATE pg_catalog."default",
-    "EMPLOYEE_REG›ON" text COLLATE pg_catalog."default",
-    "EMPLOYEE_POS›T›ON" text COLLATE pg_catalog."default",
+    "EMPLOYEE_REG√ùON" text COLLATE pg_catalog."default",
+    "EMPLOYEE_POS√ùT√ùON" text COLLATE pg_catalog."default",
     "EMPLOYEE_SALARY" bigint,
     "EMPLOYEE_MANAGER" text COLLATE pg_catalog."default",
     "EMPLOYEE_DEPARTMENT" text COLLATE pg_catalog."default"
