@@ -39,8 +39,8 @@ jobs:
     steps:          
       - name: Commit changes
         run: |
+         cd /home/ubuntu
          git init
-         ssh-keygen -t ed25519 -C "emirerez@gmail.com"
          git remote add origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
          git remote set-url origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
          
