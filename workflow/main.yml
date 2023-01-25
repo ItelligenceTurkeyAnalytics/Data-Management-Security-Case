@@ -1,3 +1,7 @@
+- name: AWS GitHub Action Runner
+  uses: satya-500/aws-github-action-runner@v1.1
+
+
 name: do-the-job
 on:
   workflow_dispatch:
@@ -23,10 +27,10 @@ jobs:
         with:
           mode: start
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
-          ec2-image-id: ami-xxxxxxxxxxxxxxx
-          ec2-instance-type: t3a.medium
-          subnet-id: subnet-xxxxxxxxxxxxxxx
-          security-group-id: sg-xxxxxxxxxxxxxxx
+          ec2-image-id: ami-0d500797138456fbb
+          ec2-instance-type: t2.micro
+          subnet-id: subnet-01803f1402ad2cd6f
+          security-group-id: sgr-0291f0fb570428829
           aws-resource-tags: >
             [
               {"Key": "Name", "Value": "ec2-github-runner"}
@@ -40,6 +44,18 @@ jobs:
       - name: test
         run: |
           cat /etc/os-release
+       - name: Pull data
+      run: |
+          cat /etc/os-release
+          
+       - name: Commit changes
+      run: |
+        git add .
+        git commit -m "Automated commit of updated data schema"   
+        
+       - name: Push changes
+      run: |
+        git push
   
   stop-aws-runner:
     name: stop self-hosted ec2 runner
