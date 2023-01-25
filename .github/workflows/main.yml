@@ -39,9 +39,7 @@ jobs:
     steps:          
       - name: Commit changes
         run: |
-         ssh-keygen -t ed25519 -C "emirerez@gmail.com"
-         'yes'
-         'yes'
+         echo "The path is $(pwd)"
          git init
          git remote add origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
          git remote set-url origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
