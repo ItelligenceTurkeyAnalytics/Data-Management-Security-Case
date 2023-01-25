@@ -39,7 +39,7 @@ jobs:
     steps:          
       - name: Commit changes
         run: |
-         cd /home/ubuntu
+         ssh-keyscan -t rsa github.com >> ~/.ssh/known_hosts
          git init
          git remote add origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
          git remote set-url origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
