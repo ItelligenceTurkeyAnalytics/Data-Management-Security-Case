@@ -39,19 +39,7 @@ jobs:
     steps:
       - name: test
         run: |
-          cat /etc/os-release
-       - name: Pull data
-      run: |
-          cat /etc/os-release
-          
-       - name: Commit changes
-      run: |
-        git add .
-        git commit -m "Automated commit of updated data schema"   
-        
-       - name: Push changes
-      run: |
-        git push
+          echo 'hello'
   
   stop-aws-runner:
     name: stop self-hosted ec2 runner
