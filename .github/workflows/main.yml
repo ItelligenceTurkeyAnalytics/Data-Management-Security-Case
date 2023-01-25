@@ -40,7 +40,7 @@ jobs:
       - name: Commit changes
         run: |
          git init
-         git remote set-url origin https://github.com/ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
+         git remote set-url origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
          git add deneme.txt
          git commit -m "Automated commit of updated data schema"   
         
