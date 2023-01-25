@@ -43,7 +43,8 @@ jobs:
           
       - name: Commit changes
         run: |
-         git add readme2.md
+         git init
+         git add .
          git commit -m "Automated commit of updated data schema"   
         
       - name: Push changes
