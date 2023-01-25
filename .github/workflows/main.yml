@@ -25,8 +25,8 @@ jobs:
           github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
           ec2-image-id: ami-0d500797138456fbb
           ec2-instance-type: t2.micro
-          security-group-id: sgr-0291f0fb570428829, sgr-0f6714528faa601ed
-          subnet-id: subnet-01803f1402ad2cd6f
+          security-group-id: sgr-0291f0fb570428829
+
           aws-resource-tags: >
             [
               {"Key": "Name", "Value": "ec2-github-runner"}
