@@ -1,6 +1,4 @@
-on:
-  schedule:
-    - cron: '0 0 * * *'
+
 
 - name: AWS GitHub Action Runner
   uses: satya-500/aws-github-action-runner@v1.1
