@@ -39,6 +39,7 @@ jobs:
     steps:          
       - name: Commit changes
         run: |
+         git config --global --add safe.directory /home/ubuntu
          cd /home/ubuntu
          echo "The path is $(pwd)"
          git init
