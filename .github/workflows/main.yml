@@ -1,0 +1,75 @@
+name: do-the-job
+on:
+  workflow_dispatch:
+jobs:
+  start-aws-runner:
+    name: start self-hosted ec2 runner
+    runs-on: ubuntu-latest
+    outputs:
+      label: ${{ steps.start-ec2-runner.outputs.label }}
+      ec2-instance-id: ${{ steps.start-ec2-runner.outputs.ec2-instance-id }}
+    steps:
+      
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+      
+      - name: start ec2 runner
+        id: start-ec2-runner
+        uses: satya-500/aws-github-action-runner@v1.1
+        with:
+          mode: start
+          github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          ec2-image-id: ami-0d500797138456fbb
+          ec2-instance-type: t2.micro
+          subnet-id: subnet-01803f1402ad2cd6f
+          security-group-id: sg-0be981576f9b708f1
+          aws-resource-tags: >
+            [
+              {"Key": "Name", "Value": "ec2-github-runner"}
+            ]
+  
+  do-the-job:
+    name: do the job on the runner
+    needs: start-aws-runner 
+    runs-on: ${{ needs.start-aws-runner.outputs.label }}
+    steps:
+      - name: test
+        run: |
+          cat /etc/os-release
+          
+      - name: Commit changes
+        run: |
+         git init
+         git add .
+         git commit -m "Automated commit of updated data schema"   
+        
+      - name: Push changes
+        run: |
+         git push
+  
+  stop-aws-runner:
+    name: stop self-hosted ec2 runner
+    needs:
+      - start-aws-runner
+      - do-the-job
+    runs-on: ubuntu-latest
+    if: ${{ always() }}
+    steps:
+      - name: configure aws credentials
+        uses: aws-actions/configure-aws-credentials@v1-node16
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-central-1
+      
+      - name: stop ec2 runner
+        uses: satya-500/aws-github-action-runner@v1.1
+        with:
+          mode: stop
+          github-token: ${{ secrets.GH_PERSONAL_ACCESS_TOKEN }}
+          label: ${{ needs.start-aws-runner.outputs.label }}
+          ec2-instance-id: ${{ needs.start-aws-runner.outputs.ec2-instance-id }}
