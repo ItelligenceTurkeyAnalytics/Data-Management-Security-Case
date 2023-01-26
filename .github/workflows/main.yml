@@ -40,12 +40,8 @@ jobs:
       - name: Commit changes
         run: |
          git init
-         git config --global --add safe.directory /home/ubuntu
-         cd /home/ubuntu
-         echo "The path is $(pwd)"
          git remote add origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
          git remote set-url origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
-         
          touch foo.txt
          echo "The path is $(pwd)"  > foo.txt
          git add foo.txt
