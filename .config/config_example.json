@@ -1,7 +1,7 @@
  {
          "username": "{username}",
          "password": "{password}",
-         "IP": "{IP}",
+         "IP_address": "{IP}",
          "port": "{default-->5432}",
          "database_name": "{database_name}"
  }

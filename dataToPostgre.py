@@ -9,7 +9,7 @@ with open('config.json') as f:
 
     username = engine_data.username
     password = engine_data.password
-    IP = engine_data.IP
+    IP_address = engine_data.IP_address
     port = engine_data.port
     database_name = engine_data.database_name
 
