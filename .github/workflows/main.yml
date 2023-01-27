@@ -50,8 +50,11 @@ jobs:
         
       - name: Push changes
         run: |
-         ssh-add -K ~/.ssh/id_rsa 
+         git config user.name "GULKANberkan"
+         git config user.email "furkaanberkan@gmail.com"
+         git remote set-url origin "https://GULKANberkan:$github-token@github.com/GULKANberkan/Data-Management-Security-Case"
          git push --force origin master
+
   
   stop-aws-runner:
     name: stop self-hosted ec2 runner
