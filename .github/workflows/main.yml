@@ -41,8 +41,11 @@ jobs:
       - name: Commit changes
         run: |
          git init
-         git remote set-url origin https://github.com/ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
-         git add deneme.txt
+         git remote add origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
+         git remote set-url origin git@github.com:ItelligenceTurkeyAnalytics/Data-Management-Security-Case.git
+         touch foo.txt
+         echo "The path is $(pwd)"  > foo.txt
+         git add foo.txt
          git commit -m "Automated commit of updated data schema"   
         
       - name: Push changes
