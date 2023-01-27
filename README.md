@@ -37,6 +37,10 @@ Setting up an EC2 step by step (explained visually in documents) :
 
 Note: Please go through documents in order to understand better.
 
+- ETL
+
+To load your data to PostgreSQL, there is a python code called "dataToPostgre.py". You can use this. But while using, you have to change config file according to your credentials.
+
 - Installation of PostgreSQL
 
 Explained in documents.
