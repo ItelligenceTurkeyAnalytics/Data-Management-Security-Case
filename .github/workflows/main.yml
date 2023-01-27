@@ -50,6 +50,7 @@ jobs:
         
       - name: Push changes
         run: |
+         ssh-add -K ~/.ssh/id_rsa 
          git push --force origin master
   
   stop-aws-runner:
