@@ -1,11 +1,20 @@
 from sqlalchemy import create_engine
 import sqlalchemy
 import pandas as pd
+import json
 
 ################## Connecting string ##################
-engine = create_engine(f'postgresql://digitalent:digitalent23@3.120.148.103:5432/test')
+with open('config.json') as f:
+    engine_data = json.load(f)
 
-engine.connect()
+    username = engine_data.username
+    password = engine_data.password
+    IP_address = engine_data.IP_address
+    port = engine_data.port
+    database_name = engine_data.database_name
+
+    engine = create_engine(f'postgresql://username:password@IP:port/database_name')
+    engine.connect()
 
 
 def sqlcol(dfparam):
