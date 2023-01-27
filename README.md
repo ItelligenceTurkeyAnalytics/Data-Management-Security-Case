@@ -43,34 +43,6 @@ Explained in documents.
 
 - Database Operations
 
-Creating "salesdataattempt" table
-
-```bash
-CREATE TABLE IF NOT EXISTS public.salesdataattempt
-(
-    index integer,
-    order_id integer,
-    quantityordered integer,
-    priceeach integer,
-    orderlinenumber integer,
-    sales integer,
-    orderdate date,
-    status character varying(255) COLLATE pg_catalog."default",
-    qtr_id integer,
-    month_id integer,
-    year_id integer,
-    productline character varying(255) COLLATE pg_catalog."default",
-    msrp integer,
-    productcode character varying(255) COLLATE pg_catalog."default",
-    customername character varying(255) COLLATE pg_catalog."default",
-    postalcode character varying(255) COLLATE pg_catalog."default",
-    country character varying(255) COLLATE pg_catalog."default",
-    costumer_lastname character varying(255) COLLATE pg_catalog."default",
-    costumer_firstname character varying(255) COLLATE pg_catalog."default",
-    employee_id integer
-);
-```
-
 Role Creation
 
 ```bash
@@ -87,10 +59,10 @@ LOGIN
 PASSWORD '*****';
 ```
 
-Activating Row Level Securiity (RLS) for "salesdataattempt" table.
+Activating Row Level Securiity (RLS) for "fact_sales" table.
 
 ```bash
-ALTER TABLE IF EXISTS public.salesdataattempt
+ALTER TABLE IF EXISTS public.fact_sales
     ENABLE ROW LEVEL SECURITY;
 ```
 
@@ -98,7 +70,7 @@ Creating Policy for RLS
 
 ```bash
 CREATE POLICY worker
-    ON public.salesdataattempt
+    ON public.fact_sales
     AS PERMISSIVE
     FOR ALL
     TO public
@@ -108,13 +80,13 @@ CREATE POLICY worker
 Granting Access for role's on "salesdataattempt" table
 
 ```bash
-GRANT ALL ON TABLE public.salesdataattempt TO digitalent;
+GRANT ALL ON TABLE public.fact_sales TO digitalent;
 
-GRANT ALL ON TABLE public.salesdataattempt TO kuba;
+GRANT ALL ON TABLE public.fact_sales TO kuba;
 
-GRANT ALL ON TABLE public.salesdataattempt TO tayland;
+GRANT ALL ON TABLE public.fact_sales TO tayland;
 
-GRANT ALL ON TABLE public.salesdataattempt TO uganda;
+GRANT ALL ON TABLE public.fact_sales TO uganda;
 -- POLICY: worker
 ```    
 
