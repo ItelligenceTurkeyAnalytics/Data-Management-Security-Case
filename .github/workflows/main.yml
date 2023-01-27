@@ -46,10 +46,9 @@ jobs:
          echo "The path is $(pwd)"  > foo.txt
          git add foo.txt
          git commit -m "Automated commit of updated data schema"   
-        
-      - name: Push changes
-        run: |
          git push --force origin master
+
+         
   
   stop-aws-runner:
     name: stop self-hosted ec2 runner
